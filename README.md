@@ -1,2 +1,5 @@
 # YZModularizedManager
 基于protocol的组件化
+
+基本思想：其实就是模块提前注册（load方法中），注册的是提供服务模块的Class，注册在了manager的cache中，使用方在使用时到cache中获取到注册过的类
+流程：提供服务的模块，load方法中注册，提供的服务写在protocol文件中（创建对应模块的protocol，注册时forProtocol参数需对应）
