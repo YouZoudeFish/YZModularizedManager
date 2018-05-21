@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wyn-Y0-r9s">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ejz-sA-yb6">
+            <objects>
+                <navigationController id="wyn-Y0-r9s" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ngO-ow-RX2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q2k-eX-CIF" kind="relationship" relationship="rootViewController" id="75G-ZW-ofS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WnN-LD-k7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1361" y="199"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a8C-1a-iD1">
+            <objects>
+                <viewController id="Q2k-eX-CIF" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a66-ix-Hec"/>
+                        <viewControllerLayoutGuide type="bottom" id="XZo-DQ-Ghc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ViI-Fv-lu4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymz-cX-zSE">
+                                <rect key="frame" x="153" y="259" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testFunc:" destination="Q2k-eX-CIF" eventType="touchUpInside" id="w1z-Z6-Tg3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="例子：该页面是商品详情页" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yic-jU-mKl">
+                                <rect key="frame" x="15" y="616.5" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XZo-DQ-Ghc" firstAttribute="top" secondItem="Yic-jU-mKl" secondAttribute="bottom" constant="30" id="58v-Kl-2CO"/>
+                            <constraint firstItem="Yic-jU-mKl" firstAttribute="leading" secondItem="ViI-Fv-lu4" secondAttribute="leading" constant="15" id="Bul-qJ-ILY"/>
+                            <constraint firstAttribute="trailing" secondItem="Yic-jU-mKl" secondAttribute="trailing" constant="15" id="ewb-Rg-XTo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E5j-Ol-TYt"/>
+                    <connections>
+                        <outlet property="testLabel" destination="Yic-jU-mKl" id="HVF-7Z-rbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLd-nC-0wj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="189"/>
+        </scene>
+    </scenes>
+</document>
